@@ -3,6 +3,7 @@ import About from "./About/About";
 import Input from "./input/Input";
 import Card from "./card/Card";
 import Gallery from "./Gallery/Gallery";
+import MasonryImagesGallery from "./Gallery/MasonryImagesGallery";
 
 const Home = () => {
   return (
@@ -10,7 +11,7 @@ const Home = () => {
       <About></About>
       <Input></Input>
       <Card></Card>
-      <Gallery></Gallery>
+      <MasonryImagesGallery></MasonryImagesGallery>
     </div>
   );
 };
