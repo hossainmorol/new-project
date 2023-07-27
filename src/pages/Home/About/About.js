@@ -36,18 +36,6 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div>
-        <div className="flex">
-          <div className=" w-52 border rounded-xl p-3">
-            <h6>Location</h6>
-            <input
-              type="text"
-              placeholder="Where are you going"
-              className=" input-style "
-            />
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

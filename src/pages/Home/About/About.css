@@ -2,6 +2,9 @@
     margin-top: 32px;
 }
 
-.input-style {
-    border: red
+
+
+
+input[type=text]:focus {
+    border: none;
 }
