@@ -30,7 +30,7 @@ const Header = () => {
             <li className="ml-5 pt-2">Home</li>
             <li className="ml-5 pt-2">About us</li>
             <li className="ml-5 pt-2">Tour</li>
-            <li className="lg:ml-24 ml-5 pt-2">Login</li>
+
             <li className="ml-5  pt-2 btn-stayle">Register</li>
           </ul>
         </div>
@@ -40,11 +40,23 @@ const Header = () => {
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal  p-0">
-          <li className="ml-5 pt-2">Home</li>
+          <li>
+            <Link className="ml-5 pt-2" to="/home">
+              Home
+            </Link>
+          </li>
           <li className="ml-5 pt-2">About us</li>
           <li className="ml-5 pt-2">Tour</li>
-          <li className="ml-24 pt-2">Login</li>
-          <li className="ml-5  pt-2 btn-stayle  ">Register</li>
+          <li>
+            <Link className="lg:ml-24 ml-5 pt-2" to="/login">
+              Login
+            </Link>
+          </li>
+          <li>
+            <Link className="ml-5  pt-2 btn-stayle" to="/register">
+              Register
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

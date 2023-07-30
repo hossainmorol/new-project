@@ -7,23 +7,27 @@ import "./About.css";
 const About = () => {
   return (
     <div>
-      <div className="hero  ">
+      <div className="hero">
         <div className="hero-content  flex-col lg:flex-row-reverse ">
           <img
-            className=" h-56  rounded-xl mt-12 w-36"
+            className="  h-100%  w-100% lg:h-56 lg:w-36  rounded-xl mt-12"
             src={heroImg1}
             alt="#"
           />
           <video
-            className=" object-cover rounded-xl mt-8   h-56  w-36 "
+            className=" object-cover rounded-xl mt-8 h-100%  w-100%    lg:h-56 lg:w-36  "
             src={heroVideo}
             alt="#"
             controls
           />
-          <img className=" h-56 rounded-xl w-36" src={heroImg2} alt="#" />
+          <img
+            className="  rounded-xl    h-100%  w-100%   lg:h-56 lg:w-36 "
+            src={heroImg2}
+            alt="#"
+          />
 
           <div className="">
-            <h1 className="text-5xl font-bold">
+            <h1 className="text-3xl lg:text-5xl md:text-5xl font-bold">
               Traveling opens the door <br /> to creating
               <span className="text-yellow-600">memories</span>
             </h1>

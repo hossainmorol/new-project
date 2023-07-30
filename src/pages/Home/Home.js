@@ -5,6 +5,8 @@ import Card from "./card/Card";
 
 import MasonryImagesGallery from "./Gallery/MasonryImagesGallery";
 import Banner from "./Banner/Banner";
+import BannerImg from "./BannerImg/BannerImg";
+import Carousel from "./Carousel/Carousel";
 
 const Home = () => {
   return (
@@ -14,6 +16,8 @@ const Home = () => {
       <Card></Card>
       <MasonryImagesGallery></MasonryImagesGallery>
       <Banner></Banner>
+      <Carousel></Carousel>
+      <BannerImg></BannerImg>
     </div>
   );
 };
