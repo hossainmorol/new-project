@@ -3,6 +3,15 @@ import { Link } from "react-router-dom";
 import loginImg from "../assest/login.png";
 
 const Login = () => {
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const from = event.target;
+    const email = from.email.value;
+    const name = from.name.value;
+    const password = from.password.value;
+    console.log(email, password, name);
+  };
+
   return (
     <div>
       <div className="hero my-24   w-full ">
@@ -11,7 +20,7 @@ const Login = () => {
             <img className="w-3/4" src={loginImg} alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={handleLogin} className="card-body">
               <h1 className="text-5xl font-bold">Login!</h1>
               <div className="form-control">
                 <label className="label">

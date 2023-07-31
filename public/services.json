@@ -1,0 +1,47 @@
+
+[
+    
+     {
+        "id": "01",
+        "img": "https://media.istockphoto.com/id/1399203149/photo/mature-hiking-couple-relax-at-viewpoint.jpg?s=612x612&w=0&k=20&c=pgkg6vZtoKuOR2HAq7crGH2PWzFYjoUGzaHgM-ny5bU=",
+        "price": "1200",
+        "description": "Paris, France",
+         "duration":"5 day"
+    },
+     {
+        "id": "02",
+        "img": "https://github.com/codingwithmuhib/MernStack-Tour-Management/blob/main/tour-management/frontend/src/assets/images/tour-img05.jpg?raw=true",
+        "price": "20.00",
+        "description": "New York City, USA",
+         "duration":"7 day"
+    },
+     {
+        "id": "03",
+        "img": "https://github.com/codingwithmuhib/MernStack-Tour-Management/blob/main/tour-management/frontend/src/assets/images/tour-img01.jpg?raw=true",
+        "price": "1500",
+        "description": "Rome, Italy'",
+         "duration":"6 day"
+    },
+     {
+        "id": "04",
+        "img": "https://github.com/codingwithmuhib/MernStack-Tour-Management/blob/main/tour-management/frontend/src/assets/images/tour-img02.jpg?raw=true",
+        "price": "20.00",
+        "description": "Cape Town, South Africa",
+         "duration":"5 day"
+    },
+     {
+        "id": "05",
+        "img": "https://github.com/codingwithmuhib/MernStack-Tour-Management/blob/main/tour-management/frontend/src/assets/images/tour-img04.jpg?raw=true",
+        "price": "20.00",
+        "description": "Kyoto, Japan",
+         "duration":"5 day"
+    },
+     {
+        "id": "06",
+        "img": "https://github.com/codingwithmuhib/MernStack-Tour-Management/blob/main/tour-management/frontend/src/assets/images/gallery-06.jpg?raw=true",
+        "price": "20.00",
+        "description": "Sydney, Australia",
+         "duration":"6 day"
+    }
+    
+]

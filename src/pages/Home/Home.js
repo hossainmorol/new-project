@@ -7,6 +7,7 @@ import MasonryImagesGallery from "./Gallery/MasonryImagesGallery";
 import Banner from "./Banner/Banner";
 import BannerImg from "./BannerImg/BannerImg";
 import Carousel from "./Carousel/Carousel";
+import Services from "./Service/Services";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <MasonryImagesGallery></MasonryImagesGallery>
       <Banner></Banner>
       <Carousel></Carousel>
+      <Services></Services>
       <BannerImg></BannerImg>
     </div>
   );

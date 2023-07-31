@@ -3,6 +3,15 @@ import registerImg from "../../assest/register.png";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const hendleSubmit = (event) => {
+    event.preventDefault();
+    const from = event.target;
+    const email = from.email.value;
+    const name = from.name.value;
+    const password = from.password.value;
+    console.log(email, password, name);
+  };
+
   return (
     <div>
       <div className="hero my-24   w-full ">
@@ -11,7 +20,7 @@ const Register = () => {
             <img className="w-3/4" src={registerImg} alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form className="card-body">
+            <form onSubmit={hendleSubmit} className="card-body">
               <h1 className="text-5xl font-bold">Singup now!</h1>
               <div className="form-control">
                 <label className="label">
