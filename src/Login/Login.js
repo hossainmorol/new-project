@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import loginImg from "../assest/login.png";
+import { AuthContext } from "../Contaxt/AuthProvider/AuthProvider";
 
 const Login = () => {
+  const { login } = useContext(AuthContext);
+  const [error, setError] = useState("");
   const handleLogin = (event) => {
     event.preventDefault();
     const from = event.target;
@@ -10,6 +13,17 @@ const Login = () => {
     const name = from.name.value;
     const password = from.password.value;
     console.log(email, password, name);
+    from.reset();
+
+    login(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (
@@ -66,6 +80,7 @@ const Login = () => {
                   className="btn btn-primary"
                   value="Login"
                 />
+                <p>{error}</p>
 
                 <p className=" mt-2 text-center">
                   New to have a accoutn

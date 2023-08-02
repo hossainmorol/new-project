@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import registerImg from "../../assest/register.png";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Contaxt/AuthProvider/AuthProvider";
 
 const Register = () => {
+  const { createUser, singGoolgle } = useContext(AuthContext);
+  const [error, setError] = useState("");
   const hendleSubmit = (event) => {
     event.preventDefault();
     const from = event.target;
@@ -10,6 +13,31 @@ const Register = () => {
     const name = from.name.value;
     const password = from.password.value;
     console.log(email, password, name);
+
+    from.reset();
+    //
+    createUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
+  };
+
+  //
+  const singupGoogle = () => {
+    singGoolgle()
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        setError("");
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (
@@ -69,9 +97,12 @@ const Register = () => {
 
                 <input
                   type="submit"
+                  onSubmit={singupGoogle}
                   className="btn btn-red mt-2"
                   value="SingupwithGoogle"
                 />
+
+                <p>{error}</p>
 
                 <p className=" mt-2 text-center">
                   New to have a accoutn
