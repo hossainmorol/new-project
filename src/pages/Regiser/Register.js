@@ -6,13 +6,32 @@ import { AuthContext } from "../../Contaxt/AuthProvider/AuthProvider";
 const Register = () => {
   const { createUser, singGoolgle } = useContext(AuthContext);
   const [error, setError] = useState("");
+  //
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  //
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
+
+  const handleConfirmPasswordChange = (event) => {
+    setConfirmPassword(event.target.value);
+  };
+
+  const handleToggleShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
+
+  //
   const hendleSubmit = (event) => {
     event.preventDefault();
     const from = event.target;
     const email = from.email.value;
     const name = from.name.value;
     const password = from.password.value;
-    console.log(email, password, name);
+
+    console.log(email, password, name, confirmPassword);
 
     from.reset();
     //
@@ -73,14 +92,33 @@ const Register = () => {
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
+                <label>Password:</label>
                 <input
-                  type="text"
+                  type={showPassword ? "text" : "password"}
+                  value={password}
                   name="password"
-                  placeholder="Enter you password"
+                  onChange={handlePasswordChange}
                   className="input input-bordered"
+                />
+
+                <br />
+
+                <label>Confirm Password:</label>
+                <input
+                  type={showPassword ? "text" : "password"}
+                  value={confirmPassword}
+                  name="Confirm Password"
+                  onChange={handleConfirmPasswordChange}
+                  className="input input-bordered"
+                />
+
+                <br />
+
+                <label>Show Password:</label>
+                <input
+                  type="checkbox"
+                  checked={showPassword}
+                  onChange={handleToggleShowPassword}
                 />
                 <label className="label">
                   <Link className="label-text-alt link link-hover">
