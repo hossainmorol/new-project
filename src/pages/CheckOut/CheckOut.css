@@ -1,0 +1,15 @@
+.btn-style {
+    background-color: chocolate;
+    padding: 8px 25px;
+    color: #ffff;
+    margin-top: 35px;
+    border-radius: 5px;
+}
+
+.span-style {
+    padding-left: 80px;
+}
+
+.span-p {
+    padding-left: 146px;
+}
